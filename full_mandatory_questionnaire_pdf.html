@@ -1,0 +1,393 @@
+
+<style>
+    td{
+        text-align: left;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th {
+        text-align: center;
+    }
+</style>
+
+
+<center><h1>Mandatory Questionnaire</h1></center>
+    
+    <table>
+        <tr>
+            <td>Initials</td>
+            <td>{{ form.initials }}</td>
+            <td>Visit Date</td>
+            <td>{{ form.visit_date }}</td>
+            <td>Postal Code</td>
+            <td>{{ form.postal_code }}</td>
+
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            <td>{{ form.date_of_birth }}</td>
+            <td>Current Age</td>
+            <td>{{ form.current_age }}</td>
+            <td>Current Height</td>
+            <td>{{ form.current_height }}</td>
+        </tr>
+        <tr>
+            <td>Current Weight</td>
+            <td>{{ form.current_weight }}</td>
+            <td>Sex at Birth</td>
+            <td> {{ form.sex_birth }}</td>
+            <td>Gender Identity</td>
+            <td> {{form.gender_identity }}</td>
+        </tr>
+        <tr>
+            <td> Gender Identity Other</td>
+            <td> {{ form.gender_identity_other }}</td>
+        </tr>
+    </table>
+
+    <h1>PART A. General Demographic and Health Information</h1>
+        <div class="field">
+            <label for="{{ form.ethnicity.id_for_label }}">1. What ethnicity do you consider yourself to be? </label>
+                {{ form.ethnicity }}
+
+                <div class="field">
+                <label for="{{ form.ethnicity_other.id_for_label }}">Ethnicity (Other)</label>
+                {{ form.ethnicity_other }}
+
+                <div class="field">
+            <label for="{{ form.born_in_canada.id_for_label }}">2. Were you born in Canada?</label>
+                {{ form.born_in_canada }}
+                <div class="field">
+                <label class="other" for="{{ form.year_moved_to_canada.id_for_label }}">Year Moved to Canada</label>
+                {{ form.year_moved_to_canada }}
+                <div class="field">
+                <label class="other" for="{{ form.birthplace.id_for_label }}">Birthplace</label>
+                {{ form.birthplace }}
+                <div class="field">
+            <label for="{{ form.highest_education_lvl.id_for_label }}">3. What is the highest level of education you have completed?</label>
+                {{ form.highest_education_lvl }}
+                <div class="field">
+                <label class="other" for="{{ form.highest_education_lvl_other.id_for_label }}">Highest Education Level (Other)</label>
+                {{ form.highest_education_lvl_other }}
+                <div class="field">
+
+
+                <p><strong>4. Has a physician ever told you that you have any of the following conditions?</strong></p>
+
+                    <table>
+                        <th> Condition</th>
+                        <th> Yes / No</th>
+                        <th> Condition</th>
+                        <th> Yes / No</th>
+                        <th> Condition</th>
+                        <th> Yes / No</th>
+
+                        <tr>
+                            <td>COPD</td>
+                            <td>{{ form.copd }}</td>
+                            <td>Emphysema</td>
+                            <td>{{ form.emphysema }}</td>
+                            <td>Chronic Bronchitis</td>
+                            <td>{{ form.chronic_bronchitis }}</td>
+                        </tr>
+                        <tr>
+                            <td>Asthma</td>
+                            <td>{{ form.asthma }}</td>
+                            <td>Diabetes</td>
+                            <td>{{ form.diabetes }}</td>
+                            <td>Hypertension</td>
+                            <td>{{ form.hypertension }}</td>
+                        </tr>
+                        <tr>
+                            <td>Tuberculosis</td>
+                            <td>{{ form.tuberculosis }}</td>
+                            <td>Adult Pneumonia</td>
+                            <td>{{ form.adult_pneumonia }}</td>
+                            <td>Pulmonary Fibrosis</td>
+                            <td>{{ form.pulmonary_fibrosis }}</td>
+                        </tr>
+                        <tr>
+                            <td>HIV</td>
+                            <td>{{ form.hiv }}</td>
+                            <td>Long COVID</td>
+                            <td>{{ form.long_covid }}</td>
+ 
+                        </tr>
+                    </table>
+
+                <label  for="{{ form.personal_cancer_history.id_for_label }}">5. Do you have a personal history of cancer?</label>
+                    {{ form.personal_cancer_history.0 }}
+                    {{ form.personal_cancer_history.1 }}
+                <label class="other" for="{{ form.personal_cancer_history_youngest_age.id_for_label }}">Personal Cancer History (Youngest Age)</label>
+                    {{ form.personal_cancer_history_youngest_age }}
+                <label class="other" for="{{ form.personal_history_cancer_type.id_for_label }}">Personal History Cancer Type</label>
+                 {{ form.personal_history_cancer_type }}
+
+    <h1>PART B. Family History</h1>
+    <table>
+        <tr>
+            <td>Number of Sisters</td>
+            <td>{{ form.num_sisters }}</td>
+            <td>Number of Half Sisters</td>
+            <td>{{ form.num_half_sisters }}</td>
+            <td>Number of Brothers</td>
+            <td>{{ form.num_brothers }}</td>
+        </tr>
+        <tr>
+            <td>Number of Half Brothers</td>
+            <td>{{ form.num_half_brothers }}</td>
+            <td>How many children do you have?</td>
+            <td>{{ form.children }}</td>
+        </tr>
+    </table>
+            <label>Were any of your first degree biological relatives diagnosed with cancer (mother, father, children, and siblings)?</label>
+                {{ form.biological_relatives_cancer }}
+                <table>
+                    <th>Biological Relationship</th>
+                    <th>Type of Cancer</th>
+                    <th>Diagnosis Age</th>
+                    <th>Biological Relationship</th>
+                    <th>Type of Cancer</th>
+                    <th>Diagnosis Age</th>
+
+                    <tr>
+                        <td>{{ form3.biological_relationship_1 }}</td>
+                        <td>{{ form3.type_of_cancer_1 }}</td>
+                        <td>{{ form3.diagnosis_age_1 }}</td>
+                        <td>{{ form3.biological_relationship_2 }}</td>
+                        <td>{{ form3.type_of_cancer_2 }}</td>
+                        <td>{{ form3.diagnosis_age_2 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form3.biological_relationship_3 }}</td>
+                        <td>{{ form3.type_of_cancer_3 }}</td>
+                        <td>{{ form3.diagnosis_age_3 }}</td>
+                        <td>{{ form3.biological_relationship_4 }}</td>
+                        <td>{{ form3.type_of_cancer_4 }}</td>
+                        <td>{{ form3.diagnosis_age_4 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form3.biological_relationship_5 }}</td>
+                        <td>{{ form3.type_of_cancer_5 }}</td>
+                        <td>{{ form3.diagnosis_age_5 }}</td>
+                        <td>{{ form3.biological_relationship_6 }}</td>
+                        <td>{{ form3.type_of_cancer_6 }}</td>
+                        <td>{{ form3.diagnosis_age_6 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form3.biological_relationship_7 }}</td>
+                        <td>{{ form3.type_of_cancer_7 }}</td>
+                        <td>{{ form3.diagnosis_age_7 }}</td>
+                        <td>{{ form3.biological_relationship_8 }}</td>
+                        <td>{{ form3.type_of_cancer_8 }}</td>
+                        <td>{{ form3.diagnosis_age_8 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form3.biological_relationship_9 }}</td>
+                        <td>{{ form3.type_of_cancer_9 }}</td>
+                        <td>{{ form3.diagnosis_age_9 }}</td>
+                        <td>{{ form3.biological_relationship_10 }}</td>
+                        <td>{{ form3.type_of_cancer_10 }}</td>
+                        <td>{{ form3.diagnosis_age_10 }}</td>
+                    </tr>
+                </table>
+                                             
+                            
+<h1>Part C. Smoking History</h1>
+
+    <label for="{{ form1.smoked_more_100_cigs.id_for_label }}">1. (a) Have you smoked more than 100 cigarettes in your lifetime?  </label> {{ form1.smoked_more_100_cigs }} </br>
+    <label for="{{ form1.age_regular_smoking.id_for_label }}">(b) How old were you when you started smoking regularly?  </label>{{ form1.age_regular_smoking }} </br>
+    <label for="{{ form1.avg_cig_per_day.id_for_label }}">(c) Average Cigarettes per Day:  </label>{{ form1.avg_cig_per_day }} </br>
+    <label for="{{ form1.stop_smoking.id_for_label }}">(d) Have you stopped smoking cigarettes now?  </label>{{ form1.stop_smoking }} </br>
+    <label for="{{ form1.last_cig_date.id_for_label }}">(e) When did you last smoke cigarettes?  </label>{{ form1.last_cig_date }} </br>
+    <label for="{{ form1.last_cig_date.id_for_label }}">(e) How old were you?  </label>{{ form1.last_cig_age }} </br>
+    <label for="{{ form1.marajuana_use.id_for_label }}">2. Have you ever used or tried marijuana/cannabis or hashish:  </label>{{ form1.marajuana_use }} </br>
+    
+    <table>
+        <th> From Age</th>
+        <th> To Age</th>
+        <th> Quantity of Use</th>
+        <th> Mode of Use</th>
+        <th> Units</th>
+        <tr>
+            <td> {{ form1.marajuana_use_age_1 }}</td>
+            <td> {{ form1.marajuana_use_to_age_1 }}</td>
+            <td> {{ form1.marajuana_use_age_1_quantity }}</td>
+            <td> {{ form1.marajuana_use_age_1_mode }}</td>
+            <td> {{ form1.marajuana_use_age_1_units }}</td>
+        </tr>
+        <tr>
+            <td> {{ form1.marajuana_use_age_2 }}</td>
+            <td> {{ form1.marajuana_use_to_age_2 }}</td>
+            <td> {{ form1.marajuana_use_age_2_quantity }}</td>
+            <td> {{ form1.marajuana_use_age_2_mode }}</td>
+            <td> {{ form1.marajuana_use_age_2_units }}</td>
+        </tr>
+        <tr>
+            <td> {{ form1.marajuana_use_age_3 }}</td>
+            <td> {{ form1.marajuana_use_to_age_3 }}</td>
+            <td> {{ form1.marajuana_use_age_3_quantity }}</td>
+            <td> {{ form1.marajuana_use_age_3_mode }}</td>
+            <td> {{ form1.marajuana_use_age_3_units }}</td>
+        </tr>
+        <tr>
+            <td> {{ form1.marajuana_use_age_4 }}</td>
+            <td> {{ form1.marajuana_use_to_age_4 }}</td>
+            <td> {{ form1.marajuana_use_age_4_quantity }}</td>
+            <td> {{ form1.marajuana_use_age_4_mode }}</td>
+            <td> {{ form1.marajuana_use_age_4_units }}</td>
+        </tr>
+    </table>
+    
+  
+    <label for="{{ form1.smoked_pipe.id_for_label }}">3. Have you ever smoked a pipe at least once a week for 1 year or longer? </label> {{ form1.smoked_pipe }} </br>
+    <label for="{{ form1.smoked_pipe_avg_ounces.id_for_label }}">(b) Average Ounces of Pipe Smoking  </label>{{ form1.smoked_pipe_avg_ounces }} </br>
+    <label for="{{ form1.still_smoking_pipe.id_for_label }}">(c) Do you still smoke a pipe now?  </label>{{ form1.still_smoking_pipe }} </br>
+    <label for="{{ form1.still_smoking_pipe_stop_date.id_for_label }}">Stop Date:  </label>{{ form1.still_smoking_pipe_stop_date }} </br>
+    <label for="{{ form1.still_smoking_pipe_stop_age.id_for_label }}">Stop Age:  </label>{{ form1.still_smoking_pipe_stop_age }} </br>
+</br>
+    <label for="id_still_smoke_cigars">4. (a) Have you ever smoked cigars at least once a week for 1 year or longer?  </label>{{ form1.still_smoke_cigars }} </br>
+    <label for="id_still_smoke_cigars_stop_date">Stop Date:  </label>{{ form1.still_smoke_cigars_stop_date }} </br>
+    <label for="id_still_smoke_cigars_stop_age">Stop Age:  </label>{{ form1.still_smoke_cigars_stop_age }} </br>
+    <label for="id_chewing_tobacco">5. (a) Have you ever used chewing tobacco?  </label>{{ form1.chewing_tobacco }} </br>
+    <label for="id_chewing_tobacco_age">Chewing Tobacco Starting Age:  </label>{{ form1.chewing_tobacco_age }} </br>
+    <label for="id_chewing_tobacco_years">Chewing Tobacco Total Years:  </label>{{ form1.chewing_tobacco_years }} </br>
+    <label for="id_snuff">(b) Have you ever used Snuff?  </label>{{ form1.snuff }} </br>
+    <label for="id_snuff_age">Snuff Starting Age:  </label>{{ form1.snuff_age }} </br>
+    <label for="id_snuff_years">Snuff Total Years:  </label>{{ form1.snuff_years }} </br>
+</br>
+    <label for="id_vape">6. (a) Have you ever vaped at least once a week for 1 year or longer?  </label>{{ form1.vape }} </br>
+    <label for="id_vape_num_times">(b) Number of Times/Week:  </label>{{ form1.vape_num_times }} </br>
+    <label for="id_vape_start_date">Vape Start Date:  </label>{{ form1.vape_start_date }} </br>
+    <label for="id_vape_start_age">Vape Start Age:  </label>{{ form1.vape_start_age }} </br>
+    <label for="id_still_vape">(d) Do you still vape now?  </label>{{ form1.still_vape }} </br>
+    <label for="id_vape_stop_date">Vape Stop Date:  </label>{{ form1.vape_stop_date }} </br>
+    <label for="id_still_vape_stop_age">Still Vape Stop Age:  </label> {{ form1.still_vape_stop_age }} </br>
+    <label for="id_vape_flavor">(e) What flavor of vape do you use most often?  </label>{{ form1.vape_flavor }} </br>
+</br>
+    <label for="id_cigs_waking_up">7. (a) Cigarettes upon Waking Up:  </label> {{ form1.cigs_waking_up }} </br>
+    <label for="id_smoke_refrain">(b) Difficult to refrain from smoking in places where it is forbidden?  </label> {{ form1.smoke_refrain }} </br>
+    <label for="id_cig_giveup">(c)	Which cigarette would you hate to give up?  </label>{{ form1.cig_giveup }} </br>
+    <label for="id_smoke_morning">(d) Do you smoke more frequently in the morning?  </label>{{ form1.smoke_morning }} </br>
+    <label for="id_smoke_sick">(e) Do you smoke even if you are sick in bed most of the day?  </label>{{ form1.smoke_sick }} </br>
+    <label for="id_quit_smoking">(f) Have you ever tried to quit smoking?  </label> {{ form1.quit_smoking}} </br>
+    <label for="id_quit_smoking_times">How many times?  </label>{{ form1.quit_smoking_times }} </br>
+
+
+
+
+
+
+    <h1>PART D. Second-Hand Smoke Exposure</h1>
+
+    <label>1. In your lifetime, you have considered your second-hand smoke exposure to be:  </label>{{ form2.second_hand_smoke }} </br>
+    <label >2. At any time in your life, have you been around someone else's tobacco smoke at least once per week for 1 year or longer?  </label> {{ form2.second_hand_1yr }}</br>
+    <label >2. (b) Where have you been around someone elses tobacco smoke?  </label></br>
+    <label class='yes_no'>Exposure at Home:  </label></br>
+    <label class='yes_no' >Exposure at Work:  </label>{{ form2.second_hand_work }}</br>
+    <label class='yes_no'  >Exposure during Leisure Activities:  </label>{{ form2.second_hand_leisure }}</br>
+    <label for="id_second_hand_daily in-line">(c) On average, how often were you around other peoples smoke?  </label> {{ form2.second_hand_daily }}</br>
+    <label >(d) On average, how many hours of exposure did you encounter for each day you were exposed?  </label></br>
+    <label class='yes_no' > &lt;2 hours:  </label>{{ form2.second_hand_2hrs }}</br>
+    <label class='yes_no'>2-4 hours:  </label> {{ form2.second_hand24hrs }}</br>
+    <label class='yes_no' >4-6 hours:  </label>{{ form2.second_hand_46hrs }}</br>
+    <label class='yes_no'>&gt; 6 hours:  </label>{{ form2.second_hand_6hrs }}</br>
+    <label >(e) How many years were you exposed in total?  </label>{{ form2.second_hand_yrs }}</br>
+    <label >3. As a child and youth (18 years and under), was your exposure to secondhand smoke at home:  </label>{{ form2.second_hand_youth }}</br>
+    
+    
+    <h1>PART E. Alcohol</h1>
+    <label>1.	Have you ever had a drink of alcohol at least once per week for 1 year or longer?  </label>{{ form2.alcohol }}</br>
+    <table>
+        <th> From Age</th>
+        <th> To Age</th>
+        <th> Beer (cans or bottles/week)</th>
+        <th> Wine (6 ounce glasses/week)</th>
+        <th> Spirit or hard liquor (ounces/week)</th>
+        <tr>
+            <td>{{ form2.alcohol_from_age1 }}</td>
+            <td>{{ form2.alcohol_to_age1 }}</td>
+            <td>{{ form2.alcohol_beer1 }}</td>
+            <td>{{ form2.alcohol_wine1 }}</td>
+            <td>{{ form2.alcohol_liquor1 }}</td>
+        </tr>
+        <tr>
+            <td>{{ form2.alcohol_from_age2 }}</td>
+            <td>{{ form2.alcohol_to_age2 }}</td>
+            <td>{{ form2.alcohol_beer2 }}</td>
+            <td>{{ form2.alcohol_wine2 }}</td>
+            <td>{{ form2.alcohol_liquor2 }}</td>
+        </tr>
+        <tr>
+            <td>{{ form2.alcohol_from_age3 }}</td>
+            <td>{{ form2.alcohol_to_age3 }}</td>
+            <td>{{ form2.alcohol_beer3 }}</td>
+            <td>{{ form2.alcohol_wine3 }}</td>
+            <td>{{ form2.alcohol_liquor3 }}</td>
+        </tr>
+        <tr>
+            <td>{{ form2.alcohol_from_age4 }}</td>
+            <td>{{ form2.alcohol_to_age4 }}</td>
+            <td>{{ form2.alcohol_beer4 }}</td>
+            <td>{{ form2.alcohol_wine4 }}</td>
+            <td>{{ form2.alcohol_liquor4 }}</td>
+        </tr>
+    </table>
+
+    <h1>PART F. Medications</h1>
+    <p>Are you currently using any of the following medications or drugs?  </p></br>
+
+    <table> 
+        <th> Drug</th>
+        <th> Yes / No</th>
+        <th>Days</th>
+        <th>Months</th>
+        <th>Years</th>
+        <th>How often have you used this medication?</th>
+
+        <tr>
+            <td>Inhaled corticosteroids?</td>
+            <td>{{ form2.inhaled_drugs }}</td>
+            <td>{{ form2.inhaled_drugs_day }}</td>
+            <td>{{ form2.inhaled_drugs_month }}</td>
+            <td>{{ form2.inhaled_drugs_year }}</td>
+            <td>{{ form2.inhaled_drugs_freq }}</td>
+        </tr>
+        <tr>
+            <td>Bronchodilators?</td>
+            <td>{{ form2.bronchodialators }}</td>
+            <td>{{ form2.bronchodialators_day }}</td>
+            <td>{{ form2.bronchodialators_month }}</td>
+            <td>{{ form2.bronchodialators_year }}</td>
+            <td>{{ form2.bronchodialators_freq }}</td>
+        </tr>
+        <tr>
+            <td>Statins:</td>
+            <td>{{ form2.statins }}</td>
+            <td>{{ form2.statins_day }}</td>
+            <td>{{ form2.statins_month }}</td>
+            <td>{{ form2.statins_year }}</td>
+            <td>{{ form2.statins_freq }}</td>
+        </tr>
+        <tr>
+            <td>Metformin:</td>
+            <td>{{ form2.metform2in }}</td>
+            <td>{{ form2.metform2in_day }}</td>
+            <td>{{ form2.metform2in_month }}</td>
+            <td>{{ form2.metform2in_year }}</td>
+            <td>{{ form2.metform2in_freq }}</td>
+        </tr>
+    </table>
+</br>
+</br>
+    <label >1. Which of these categories best describes your current working situation? </label>{{ fg_form2.current_working_situation }}</br>
+    <label >Other - Please specify:  </label>{{ fg_form2.current_working_situation_other }}</br>
+    <label >2. (a) In what occupation have you worked the longest during your adult life?  </label>  {{ fg_form2.occupation_longest }}</br>
+    <label >(b) What were your usual activities and duties in this occupation?  </label> {{ fg_form2.occupation_longest_activities }}</br>
+    <label >(c) How many years have you worked in this occupation?  </label>{{ fg_form2.occupation_exposure }}</br>
+    <label >3. Do you think you've been exposed for more than one year?  </label>{{ fg_form2.occupation_exposure }}</br>
+    <label >What fumes, dusts, chemicals or agents have you been exposed to?  </label> {{ fg_form2.occupation_fumes }}</br>
+    <label >How many years have you been exposed?  </label>{{ fg_form2.occupation_years }}</br>
+    </br>

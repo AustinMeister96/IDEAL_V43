@@ -1,0 +1,790 @@
+{% load static %} 
+
+  
+  <!DOCTYPE html>
+   <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>PDF with Image</title>
+        <style>
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+            table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+        }
+        </style>
+    </head>
+    <body>
+
+
+
+
+   <center><h1>IDEAL Optional Questionnaire</h1></center>
+   
+   
+   <h2>Part H Additional Occupational History</h2>
+        
+   <table>
+      <th><label for="id_total_exposure">Substance</label></td>
+      <th>Exposed to substance</th>
+      <th>Duration</th>
+      <th>Expsoure Age</th>
+
+    <tr>
+        <td><label for="id_asbestos_exposure" class="label-class">Asbestos Exposure</label></td>
+        <td>
+          {{ form2.asbestos_exposure.0 }}<br>
+          {{ form2.asbestos_exposure.1 }}<br>
+          {{ form2.asbestos_exposure.2 }}
+        </td>
+      <td>{{ form2.asbestos_exposure_duration }}</td>
+      <td>{{ form2.asbestos_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_silica_exposure" class="label-class">Silica Exposure</label></td>
+      <td>
+        {{ form2.silica_exposure.0 }}<br>
+        {{ form2.silica_exposure.1 }}<br>
+        {{ form2.silica_exposure.2 }}
+      </td>
+      <td>{{ form2.silica_exposure_age }}</td>
+      <td>{{ form2.silica_exposure_duration }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_diesel" class="label-class">Diesel</label></td>
+      <td>
+        {{ form2.diesel.0 }}<br>
+        {{ form2.diesel.1 }}<br>
+        {{ form2.diesel.2 }}
+      </td>
+      <td>{{ form2.diesel_duration }}</td>
+      <td>{{ form2.diesel_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_radon" class="label-class">Radon</label></td>
+      <td>
+        {{ form2.radon.0 }}<br>
+        {{ form2.radon.1 }}<br>
+        {{ form2.radon.2 }}
+      </td>
+      <td>{{ form2.radon_duration }}</td>
+      <td>{{ form2.radon_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_cadmium" class="label-class">Cadmium</label></td>
+      <td>
+        {{ form2.cadmium.0 }}<br>
+        {{ form2.cadmium.1 }}<br>
+        {{ form2.cadmium.2 }}
+      </td>
+      <td>{{ form2.cadmium_duration }}</td>
+      <td>{{ form2.cadmium_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_chromium" class="label-class">Chromium</label></td>
+      <td>
+        {{ form2.chromium.0 }}<br>
+        {{ form2.chromium.1 }}<br>
+        {{ form2.chromium.2 }}
+      </td>
+      <td>{{ form2.chromium_duration }}</td>
+      <td>{{ form2.chromium_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_coal" class="label-class">Coal</label></td>
+      <td>
+        {{ form2.coal.0 }}<br>
+        {{ form2.coal.1 }}<br>
+        {{ form2.coal.2 }}
+      </td>
+      <td>{{ form2.coal_duration }}</td>
+      <td>{{ form2.coal_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_arsenic" class="label-class">Arsenic</label></td>
+      <td>
+        {{ form2.arsenic.0 }}<br>
+        {{ form2.arsenic.1 }}<br>
+        {{ form2.arsenic.2 }}
+      </td>
+      <td>{{ form2.arsenic_duration }}</td>
+      <td>{{ form2.arsenic_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_nickel" class="label-class">Nickel</label></td>
+      <td>
+        {{ form2.nickel.0 }}<br>
+        {{ form2.nickel.1 }}<br>
+        {{ form2.nickel.2 }}
+      </td>
+      <td>{{ form2.nickel_duration }}</td>
+      <td>{{ form2.nickel_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_plutonium" class="label-class">Plutonium</label></td>
+      <td>
+        {{ form2.plutonium.0 }}<br>
+        {{ form2.plutonium.1 }}<br>
+        {{ form2.plutonium.2 }}
+      </td>
+      <td>{{ form2.plutonium_duration }}</td>
+      <td>{{ form2.plutonium_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_beryllium" class="label-class">Beryllium</label></td>
+      <td>
+        {{ form2.beryllium.0 }}<br>
+        {{ form2.beryllium.1 }}<br>
+        {{ form2.beryllium.2 }}
+      </td>
+      <td>{{ form2.beryllium_duration }}</td>
+      <td>{{ form2.beryllium_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_ether" class="label-class">Ether</label></td>
+      <td>
+        {{ form2.ether.0 }}<br>
+        {{ form2.ether.1 }}<br>
+        {{ form2.ether.2 }}
+      </td>
+      <td>{{ form2.ether_duration }}</td>
+      <td>{{ form2.ether_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_soot" class="label-class">Soot</label></td>
+      <td>
+        {{ form2.soot.0 }}<br>
+        {{ form2.soot.1 }}<br>
+        {{ form2.soot.2 }}
+      </td>
+      <td>{{ form2.soot_duration }}</td>
+      <td>{{ form2.soot_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_welding" class="label-class">Welding</label></td>
+      <td>
+        {{ form2.welding.0 }}<br>
+        {{ form2.welding.1 }}<br>
+        {{ form2.welding.2 }}
+      </td>
+      <td>{{ form2.welding_duration }}</td>
+      <td>{{ form2.welding_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_radiation" class="label-class">Radiation</label></td>
+      <td>
+        {{ form2.radiation.0 }}<br>
+        {{ form2.radiation.1 }}<br>
+        {{ form2.radiation.2 }}
+      </td>
+      <td>{{ form2.radiation_duration }}</td>
+      <td>{{ form2.radiation_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_munitions" class="label-class">Munitions</label></td>
+      <td>
+        {{ form2.munitions.0 }}<br>
+        {{ form2.munitions.1 }}<br>
+        {{ form2.munitions.2 }}
+      </td>
+      <td>{{ form2.munitions_duration }}</td>
+      <td>{{ form2.munitions_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_warfare" class="label-class">Warfare</label></td>
+      <td>
+        {{ form2.warfare.0 }}<br>
+        {{ form2.warfare.1 }}<br>
+        {{ form2.warfare.2 }}
+      </td>
+      <td>{{ form2.warfare_duration }}</td>
+      <td>{{ form2.warfare_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_acheson" class="label-class">Acheson</label></td>
+      <td>
+        {{ form2.acheson.0 }}<br>
+        {{ form2.acheson.1 }}<br>
+        {{ form2.acheson.2 }}
+      </td>
+      <td>{{ form2.acheson_duration }}</td>
+      <td>{{ form2.acheson_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_aluminum" class="label-class">Aluminum</label></td>
+      <td>
+        {{ form2.aluminum.0 }}<br>
+        {{ form2.aluminum.1 }}<br>
+        {{ form2.aluminum.2 }}
+      </td>
+      <td>{{ form2.aluminum_duration }}</td>
+      <td>{{ form2.aluminum_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_coke" class="label-class">Coke</label></td>
+      <td>
+        {{ form2.coke.0 }}<br>
+        {{ form2.coke.1 }}<br>
+        {{ form2.coke.2 }}
+      </td>
+      <td>{{ form2.coke_duration }}</td>
+      <td>{{ form2.coke_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_mining" class="label-class">Mining</label></td>
+      <td>
+        {{ form2.mining.0 }}<br>
+        {{ form2.mining.1 }}<br>
+        {{ form2.mining.2 }}
+      </td>
+      <td>{{ form2.mining_duration }}</td>
+      <td>{{ form2.mining_exposure_age }}</td>
+    </tr>
+    <tr>
+      <td><label for="id_iron">Iron</td>
+      <td>
+        {{ form2.iron.0 }}<br>
+        {{ form2.iron.1 }}<br>
+        {{ form2.iron.2 }}
+      </td>
+      <td>{{ form2.iron_duration }}</td>
+      <td>{{ form2.iron_exposure_age }}</td>
+
+    </tr>
+    <tr>
+      <td><label for="id_painting" class="label-class">Painting</label></td>
+      <td>
+        {{ form2.painting.0 }}<br>
+        {{ form2.painting.1 }}<br>
+        {{ form2.painting.2 }}
+      </td>
+      <td>{{ form2.painting_duration }}</td>
+      <td>{{ form2.painting_exposure_age }}</td>
+    </tr>
+
+    <tr>
+      <td><label for="id_painting" class="label-class">Rubber</label></td>
+      <td>
+        {{ form2.rubber.0 }}<br>
+        {{ form2.rubber.1 }}<br>
+        {{ form2.rubber.2 }}
+      </td>
+      <td>{{ form2.rubber_duration }}</td>
+      <td>{{ form2.rubber_exposure_age }}</td>
+    </tr>
+
+    <tr>
+      <td><label for="id_painting" class="label-class">Burn Pits</label></td>
+      <td>
+        {{ form2.burn_pits.0 }}<br>
+        {{ form2.burn_pits.1 }}<br>
+        {{ form2.burn_pits.2 }}
+      </td>
+      <td>{{ form2.burn_pits_duration }}</td>
+      <td>{{ form2.burn_pits_exposure_age }}</td>
+    </tr>
+
+    <tr>
+      <td><label for="id_painting" class="label-class">Oil Fires</label></td>
+      <td>
+        {{ form2.oil_fires.0 }}<br>
+        {{ form2.oil_fires.1 }}<br>
+        {{ form2.oil_fires.2 }}
+      </td>
+      <td>{{ form2.oil_fires_duration }}</td>
+      <td>{{ form2.oil_fires_exposure_age }}</td>
+    </tr>
+
+    <tr>
+      <td><label for="id_painting" class="label-class">Sulfur Fires</label></td>
+      <td>
+        {{ form2.sulfur_fires.0 }}<br>
+        {{ form2.sulfur_fires.1 }}<br>
+        {{ form2.sulfur_fires.2 }}
+      </td>
+      <td>{{ form2.sulfur_fires_duration }}</td>
+      <td>{{ form2.sulfur_fires_exposure_age }}</td>
+    </tr>
+
+    <tr>
+      <td><label for="id_painting" class="label-class">Atsugi</label></td>
+      <td>
+        {{ form2.atsugi.0 }}<br>
+        {{ form2.atsugi.1 }}<br>
+        {{ form2.atsugi.2 }}
+      </td>
+      <td>{{ form2.atsugi_duration }}</td>
+      <td>{{ form2.atsugi_exposure_age }}</td>
+    </tr>
+
+    <tr>
+      <td><label for="id_painting" class="label-class">Sand Storms</label></td>
+      <td>
+        {{ form2.sand_storms.0 }}<br>
+        {{ form2.sand_storms.1 }}<br>
+        {{ form2.sand_storms.2 }}
+      </td>
+      <td>{{ form2.sand_storms_duration }}</td>
+      <td>{{ form2.sand_storms_exposure_age }}</td>
+    </tr>
+  </table>
+
+</br>
+</br>
+</br>
+</br>
+     
+    <h2> 2. Job History</h2>       
+    <center>
+      <tabel>
+
+        <th>Job Held</th>
+        <th> Duration</th>
+        <th>Industry</th>
+
+        <tr>
+          <td>{{ form2.job_held }}</td>
+          <td>{{ form2.job_held_duration }}</td>
+          <td>{{ form2.job_held_industry }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ form2.job_held_2 }}</td>
+          <td>{{ form2.job_held_2_duration }}</td>
+          <td>{{ form2.job_held_2_industry }}</td>
+        </tr>
+        <tr>
+          <td>{{ form2.job_held_3 }}</td>
+          <td>{{ form2.job_held_3_duration }}</td>
+          <td>{{ form2.job_held_3_industry }}</td>
+        </tr>
+
+      </tabel>
+    </center>
+
+      </br>
+
+      <h2>Part I. Air Pollution</h2>
+        <label for="id_duration_outdoor_pollution">Duration Outdoor Pollution</label>
+        {{ form2.duration_outdoor_pollution }}
+      </br>
+        <label for="id_duraiton_indoor_pollution">Duration Indoor Pollution</label>
+        {{ form2.duraiton_indoor_pollution }}
+      </br>
+      <h1>Part J. Cooking and Food</h1>
+      <table>
+        <th></th>
+        <th></th>
+        <tr>
+          <td>1.	Where was cooking for the household done?</td>
+          <td>  
+            {{ form2.cooking_location.0 }}
+            {{ form2.cooking_location.1 }}
+            {{ form2.cooking_location.2 }}
+            {{ form2.cooking_location.3 }}
+          </td>
+        </tr>
+        <tr>
+          <td>2.	If cooking was conducted inside the house, were there any of the following?</td>
+          <td>
+            {{form2.cooking_appliances.0}}
+            {{form2.cooking_appliances.1}}
+            {{form2.cooking_appliances.2}}
+            {{form2.cooking_appliances.3}}
+          </td>
+        </tr>
+        <tr>
+          <td>3. Do you ever do the cooking?</td>
+          <td>{{ form2.cooking }}</td>
+        </tr>
+        <tr>
+          <td>4. How often are you in the house/room when the cooking is being done?</td>
+          <td>{{ form2.frequency_in_cooking_location }}</td>
+        </tr>
+        <tr>
+          <td>5. Do you use a kitchen range hood when cooking?</td>
+          <td>{{ form2.kitchen_range }}</td>
+        </tr>
+        <tr>
+          <td>How old were you when you began to use a kitchen hood</td>
+          <td>{{ form2.kitchen_range_age }}</td>
+        </tr>
+        </table>
+      </br>
+      <center>
+      <h3>Cooking Info</h3>
+      <table>
+        <tr>
+          <th> 0-20 Frequency:</th>
+          <th> Frequency Times:</th>
+          <th>Fuel:</th>
+          <th> Fuel (Other):</th>
+          <th> Cooking Oil:</th>
+          <th> Cooking Oil Other:</th>
+  
+        </tr>
+        <tr>
+          <td>{{ form2.cooking_0_20_frequency }}</td>
+          <td>{{ form2.cooking_0_20_frequency_times }}</td>
+          <td>{{ form2.cooking_0_20_fuel }}</td>
+          <td>{{ form2.cooking_0_20_fuel_other }}</td>
+          <td>{{ form2.cooking_0_20_cooking_oil }}</td>
+          <td>{{ form2.cooking_0_20_cooking_oil_other }}</td>
+  
+        </tr>
+        <tr>
+          <th> 21-40 Frequency:</th>
+          <th> Frequency Times:</th>
+          <th> Fuel:</th>
+          <th> Fuel (Other):</th>
+          <th> Cooking Oil:</th>
+          <th> Cooking Oil Other:</th>
+  
+        </tr>
+        <tr>
+          <td>{{ form2.cooking_21_40_frequency }}</td>
+          <td>{{ form2.cooking_21_40_frequency_times }}</td>
+          <td>{{ form2.cooking_21_40_fuel }}</td>
+          <td>{{ form2.cooking_21_40_fuel_other }}</td>
+          <td>{{ form2.cooking_21_40_cooking_oil }}</td>
+          <td>{{ form2.cooking_21_40_cooking_oil_other }}</td>
+  
+        </tr>
+        <tr>
+          <th> 41-60 Frequency:</th>
+          <th> Frequency Times:</th>
+          <th> Fuel:</th>
+          <th> Fuel (Other):</th>
+          <th> Cooking Oil:</th>
+          <th> Cooking Oil Other:</th>
+  
+        </tr>
+        <tr>
+          <td>{{ form2.cooking_41_60_frequency }}</td>
+          <td>{{ form2.cooking_41_60_frequency_times }}</td>
+          <td>{{ form2.cooking_41_60_fuel }}</td>
+          <td>{{ form2.cooking_41_60_fuel_other }}</td>
+          <td>{{ form2.cooking_41_60_cooking_oil }}</td>
+          <td>{{ form2.cooking_41_60_cooking_oil_other }}</td>
+  
+        </tr>
+        <tr>
+          <th> 61-80 Frequency:</th>
+          <th> Frequency Times:</th>
+          <th> Fuel:</th>
+          <th> Fuel (Other):</th>
+          <th> Cooking Oil:</th>
+          <th> Cooking Oil Other:</th>
+  
+        </tr>
+        <tr>
+          <td>{{ form2.cooking_61_above_frequency }}</td>
+          <td>{{ form2.cooking_61_above_frequency_times }}</td>
+          <td>{{ form2.cooking_61_above_fuel }}</td>
+          <td>{{ form2.cooking_61_above_fuel_other }}</td>
+          <td>{{ form2.cooking_61_above_cooking_oil }}</td>
+          <td>{{ form2.cooking_61_above_cooking_oil_other }}</td>
+  
+        </tr>
+      </table>
+    </center>
+    </br>
+          <label for="id_processed_meat_frequency">6.	How often do you eat the following foods? Bacon, processed meats etc.</label>
+          {{ form2.processed_meat_frequency }}
+        </br>
+          <label for="id_red_meat_frequency">7.	How often do you eat the following foods? Red meat, Beef, Pork, etc.</label>
+          {{ form2.red_meat_frequency }}
+        </br>
+      </form>
+        <h2>PART K. Residential History</h2>
+  
+          <table>
+            <tr>
+              <th colspan="2" style="text-align: left;">Home 1</th>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_start_yr" class="label-class">Start Year</label></td>
+              <td>{{ form3.home_1_start_yr }}</td>
+              <td><label for="id_home_1_end_yr" class="label-class">End Year</label></td>
+              <td>{{ form3.home_1_end_yr }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_country" class="label-class">Country</label></td>
+              <td>{{ form3.home_1_country }}</td>
+              <td><label for="id_home_1_city" class="label-class">City</label></td>
+              <td>{{ form3.home_1_city }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_province" class="label-class">Province</label></td>
+              <td>{{ form3.home_1_province }}</td>
+              <td><label for="id_home_1_postal_code" class="label-class">Postal Code</label></td>
+              <td>{{ form3.home_1_postal_code }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_street_address" class="label-class">Street Address</label></td>
+              <td>{{ form3.home_1_street_address }}</td>
+              <td><label for="id_home_1_map_coordinates" class="label-class">Map Coordinates</label></td>
+              <td>{{ form3.home_1_map_coordinates }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_avg_monthly_stay" class="label-class">Average Monthly Stay</label></td>
+              <td>{{ form3.home_1_avg_monthly_stay }}</td>
+              <td><label for="id_home_1_housing_type" class="label-class">Housing Type</label></td>
+              <td>{{ form3.home_1_housing_type }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_housing_type_other" class="label-class">Housing Type (Other)</label></td>
+              <td>{{ form3.home_1_housing_type_other }}</td>
+              <td><label for="id_home_1_trucks" class="label-class">Trucks</label></td>
+              <td>{{ form3.home_1_trucks }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_water_src" class="label-class">Water Source</label></td>
+              <td>{{ form3.home_1_water_src }}</td>
+              <td><label for="id_home_1_water_src_other" class="label-class">Water Source (Other)</label></td>
+              <td>{{ form3.home_1_water_src_other }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_heat_src" class="label-class">Heat Source</label></td>
+              <td>{{ form3.home_1_heat_src }}</td>
+              <td><label for="id_home_1_heat_src_other" class="label-class">Heat Source (Other)</label></td>
+              <td>{{ form3.home_1_heat_src_other }}</td>
+            </tr>
+
+            <tr>
+              <th colspan="2" style="text-align: left;">Home 2</th>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_start_yr" class="label-class">Start Year</label></td>
+              <td>{{ form3.home_2_start_yr }}</td>
+              <td><label for="id_home_1_end_yr" class="label-class">End Year</label></td>
+              <td>{{ form3.home_2_end_yr }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_country" class="label-class">Country</label></td>
+              <td>{{ form3.home_2_country }}</td>
+              <td><label for="id_home_1_city" class="label-class">City</label></td>
+              <td>{{ form3.home_2_city }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_province" class="label-class">Province</label></td>
+              <td>{{ form3.home_2_province }}</td>
+              <td><label for="id_home_1_postal_code" class="label-class">Postal Code</label></td>
+              <td>{{ form3.home_2_postal_code }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_street_address" class="label-class">Street Address</label></td>
+              <td>{{ form3.home_2_street_address }}</td>
+              <td><label for="id_home_1_map_coordinates" class="label-class">Map Coordinates</label></td>
+              <td>{{ form3.home_2_map_coordinates }}</td>
+            </tr>
+
+            <tr>
+              <td><label for="id_home_1_housing_type_other" class="label-class">Housing Type (Other)</label></td>
+              <td>{{ form3.home_2_housing_type_other }}</td>
+              <td><label for="id_home_1_trucks" class="label-class">Trucks</label></td>
+              <td>{{ form3.home_2_trucks }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_water_src" class="label-class">Water Source</label></td>
+              <td>{{ form3.home_2_water_src }}</td>
+              <td><label for="id_home_1_water_src_other" class="label-class">Water Source (Other)</label></td>
+              <td>{{ form3.home_2_water_src_other }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_heat_src" class="label-class">Heat Source</label></td>
+              <td>{{ form3.home_2_heat_src }}</td>
+              <td><label for="id_home_1_heat_src_other" class="label-class">Heat Source (Other)</label></td>
+              <td>{{ form3.home_2_heat_src_other }}</td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: left;">Home 3</th>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_start_yr" class="label-class">Start Year</label></td>
+              <td>{{ form3.home_3_start_yr }}</td>
+              <td><label for="id_home_1_end_yr" class="label-class">End Year</label></td>
+              <td>{{ form3.home_3_end_yr }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_country" class="label-class">Country</label></td>
+              <td>{{ form3.home_3_country }}</td>
+              <td><label for="id_home_1_city" class="label-class">City</label></td>
+              <td>{{ form3.home_3_city }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_province" class="label-class">Province</label></td>
+              <td>{{ form3.home_3_province }}</td>
+              <td><label for="id_home_1_postal_code" class="label-class">Postal Code</label></td>
+              <td>{{ form3.home_3_postal_code }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_street_address" class="label-class">Street Address</label></td>
+              <td>{{ form3.home_3_street_address }}</td>
+              <td><label for="id_home_1_map_coordinates" class="label-class">Map Coordinates</label></td>
+              <td>{{ form3.home_3_map_coordinates }}</td>
+            </tr>
+
+            <tr>
+              <td><label for="id_home_1_housing_type_other" class="label-class">Housing Type (Other)</label></td>
+              <td>{{ form3.home_3_housing_type_other }}</td>
+              <td><label for="id_home_1_trucks" class="label-class">Trucks</label></td>
+              <td>{{ form3.home_3_trucks }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_water_src" class="label-class">Water Source</label></td>
+              <td>{{ form3.home_3_water_src }}</td>
+              <td><label for="id_home_1_water_src_other" class="label-class">Water Source (Other)</label></td>
+              <td>{{ form3.home_3_water_src_other }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_heat_src" class="label-class">Heat Source</label></td>
+              <td>{{ form3.home_3_heat_src }}</td>
+              <td><label for="id_home_1_heat_src_other" class="label-class">Heat Source (Other)</label></td>
+              <td>{{ form3.home_3_heat_src_other }}</td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: left;">Home 4</th>
+            </tr>
+            <tr>
+              <td><label for="id_home_4_start_yr" class="label-class">Start Year</label></td>
+              <td>{{ form3.home_4_start_yr }}</td>
+              <td><label for="id_home_4_end_yr" class="label-class">End Year</label></td>
+              <td>{{ form3.home_4_end_yr }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_4_country" class="label-class">Country</label></td>
+              <td>{{ form3.home_4_country }}</td>
+              <td><label for="id_home_4_city" class="label-class">City</label></td>
+              <td>{{ form3.home_4_city }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_4_province" class="label-class">Province</label></td>
+              <td>{{ form3.home_4_province }}</td>
+              <td><label for="id_home_4_postal_code" class="label-class">Postal Code</label></td>
+              <td>{{ form3.home_4_postal_code }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_4_street_address" class="label-class">Street Address</label></td>
+              <td>{{ form3.home_4_street_address }}</td>
+              <td><label for="id_home_4_map_coordinates" class="label-class">Map Coordinates</label></td>
+              <td>{{ form3.home_4_map_coordinates }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_housing_type_other" class="label-class">Housing Type (Other)</label></td>
+              <td>{{ form3.home_4_housing_type_other }}</td>
+              <td><label for="id_home_1_trucks" class="label-class">Trucks</label></td>
+              <td>{{ form3.home_4_trucks }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_water_src" class="label-class">Water Source</label></td>
+              <td>{{ form3.home_4_water_src }}</td>
+              <td><label for="id_home_1_water_src_other" class="label-class">Water Source (Other)</label></td>
+              <td>{{ form3.home_4_water_src_other }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_heat_src" class="label-class">Heat Source</label></td>
+              <td>{{ form3.home_4_heat_src }}</td>
+              <td><label for="id_home_1_heat_src_other" class="label-class">Heat Source (Other)</label></td>
+              <td>{{ form3.home_4_heat_src_other }}</td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: left;">Home 5</th>
+            </tr>
+            <tr>
+              <td><label for="id_home_5_start_yr" class="label-class">Start Year</label></td>
+              <td>{{ form3.home_5_start_yr }}</td>
+              <td><label for="id_home_5_end_yr" class="label-class">End Year</label></td>
+              <td>{{ form3.home_5_end_yr }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_5_country" class="label-class">Country</label></td>
+              <td>{{ form3.home_5_country }}</td>
+              <td><label for="id_home_5_city" class="label-class">City</label></td>
+              <td>{{ form3.home_5_city }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_5_province" class="label-class">Province</label></td>
+              <td>{{ form3.home_5_province }}</td>
+              <td><label for="id_home_5_postal_code" class="label-class">Postal Code</label></td>
+              <td>{{ form3.home_5_postal_code }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_5_street_address" class="label-class">Street Address</label></td>
+              <td>{{ form3.home_5_street_address }}</td>
+              <td><label for="id_home_5_map_coordinates" class="label-class">Map Coordinates</label></td>
+              <td>{{ form3.home_5_map_coordinates }}</td>
+            </tr>
+
+            <tr>
+              <td><label for="id_home_1_housing_type_other" class="label-class">Housing Type (Other)</label></td>
+              <td>{{ form3.home_5_housing_type_other }}</td>
+              <td><label for="id_home_1_trucks" class="label-class">Trucks</label></td>
+              <td>{{ form3.home_5_trucks }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_water_src" class="label-class">Water Source</label></td>
+              <td>{{ form3.home_5_water_src }}</td>
+              <td><label for="id_home_1_water_src_other" class="label-class">Water Source (Other)</label></td>
+              <td>{{ form3.home_5_water_src_other }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_heat_src" class="label-class">Heat Source</label></td>
+              <td>{{ form3.home_5_heat_src }}</td>
+              <td><label for="id_home_1_heat_src_other" class="label-class">Heat Source (Other)</label></td>
+              <td>{{ form3.home_5_heat_src_other }}</td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: left;">Home 6</th>
+            </tr>
+            <tr>
+              <td><label for="id_home_6_start_yr" class="label-class">Start Year</label></td>
+              <td>{{ form3.home_6_start_yr }}</td>
+              <td><label for="id_home_6_end_yr" class="label-class">End Year</label></td>
+              <td>{{ form3.home_6_end_yr }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_6_country" class="label-class">Country</label></td>
+              <td>{{ form3.home_6_country }}</td>
+              <td><label for="id_home_6_city" class="label-class">City</label></td>
+              <td>{{ form3.home_6_city }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_6_province" class="label-class">Province</label></td>
+              <td>{{ form3.home_6_province }}</td>
+              <td><label for="id_home_6_postal_code" class="label-class">Postal Code</label></td>
+              <td>{{ form3.home_6_postal_code }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_6_street_address" class="label-class">Street Address</label></td>
+              <td>{{ form3.home_6_street_address }}</td>
+              <td><label for="id_home_6_map_coordinates" class="label-class">Map Coordinates</label></td>
+              <td>{{ form3.home_6_map_coordinates }}</td>
+            </tr>            
+            <tr>
+              <td><label for="id_home_1_housing_type_other" class="label-class">Housing Type (Other)</label></td>
+              <td>{{ form3.home_6_housing_type_other }}</td>
+              <td><label for="id_home_1_trucks" class="label-class">Trucks</label></td>
+              <td>{{ form3.home_6_trucks }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_water_src" class="label-class">Water Source</label></td>
+              <td>{{ form3.home_6_water_src }}</td>
+              <td><label for="id_home_1_water_src_other" class="label-class">Water Source (Other)</label></td>
+              <td>{{ form3.home_6_water_src_other }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_home_1_heat_src" class="label-class">Heat Source</label></td>
+              <td>{{ form3.home_6_heat_src }}</td>
+              <td><label for="id_home_1_heat_src_other" class="label-class">Heat Source (Other)</label></td>
+              <td>{{ form3.home_6_heat_src_other }}</td>
+            </tr>
+          </table>
+  </body>
+</html>
