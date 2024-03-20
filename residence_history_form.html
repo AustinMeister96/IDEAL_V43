@@ -1,0 +1,2248 @@
+{% extends 'base.html' %}
+
+{% block title %}Part H: Additional Occupational History{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<div id="main">
+  <div id="lab_processing" class="dataentry">
+    <h1>PART K. Residential History</h1>
+
+    <form method="post" class="">
+      {% csrf_token %}
+      <input type="hidden" name="participant_num" value="{{ participant_id }}">
+      <div class="static-field-repeater">
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 1</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_1_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_1_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_1_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_1_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_1_city" class="label-class">City</label>
+               <div class="input">
+                  {{ form3.home_1_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_1_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_1_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_1_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_1_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_1_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_1_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_1_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_1_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_1_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_1_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_1_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_1_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_1_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_1_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_1_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_1_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_1_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_1_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_2_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_1_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_2_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_1_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_2_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_1_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_2_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_1_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 2</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_2_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_2_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_2_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_2_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_2_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_2_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_2_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_2_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_2_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_2_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_2_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_2_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_2_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_2_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_2_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_2_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_2_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_2_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_2_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_2_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_2_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_2_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_2_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_2_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_2_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_2_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_2_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_2_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_2_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_2_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_2_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_2_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 3</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_3_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_3_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_3_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_3_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_3_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_3_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_3_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_3_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_3_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_3_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_3_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_3_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_3_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_3_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_3_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_3_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_3_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_3_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_3_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_3_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_3_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_3_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_3_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_3_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_3_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_3_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_3_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_3_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_3_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_3_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_3_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_3_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 4</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_4_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_4_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_4_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_4_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_4_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_4_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_4_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_4_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_4_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_4_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_4_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_4_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_4_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_4_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_4_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_4_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_4_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_4_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_4_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_4_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_4_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_4_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_4_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_4_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_4_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_4_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_4_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_4_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_4_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_4_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_4_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_4_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 5</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_5_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_5_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_5_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_5_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_5_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_5_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_5_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_5_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_5_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_5_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_5_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_5_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_5_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_5_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_5_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_5_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_5_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_5_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_5_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_5_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_5_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_5_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_5_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_5_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_5_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_5_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_5_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_5_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_5_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_5_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_5_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_5_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 6</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_6_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_6_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_6_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_6_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_6_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_6_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_6_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_6_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_6_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_6_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_6_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_6_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_6_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_6_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_6_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_6_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_6_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_6_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_6_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_6_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_6_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_6_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_6_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_6_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_6_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_6_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_6_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_6_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_6_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_6_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_6_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_6_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 7</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_7_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_7_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_6_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_7_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_7_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_7_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_7_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_7_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_7_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_7_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_7_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_7_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_7_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_7_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_7_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_7_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_7_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_7_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_7_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_7_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_7_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_7_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_7_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_7_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_7_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_7_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_7_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_7_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_7_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_7_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_7_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_7_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 8</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_8_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_8_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_8_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_8_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_8_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_8_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_8_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_8_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_8_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_8_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_8_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_8_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_8_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_8_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_8_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_8_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_8_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_8_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_8_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_8_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_8_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_8_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_8_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_8_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_8_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_8_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_8_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_8_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_8_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_8_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_8_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_8_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 9</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_9_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_9_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_9_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_9_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_9_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_9_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_9_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_9_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_9_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_9_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_9_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_9_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_9_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_9_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_9_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_9_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_9_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_9_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_9_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_9_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_9_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_9_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_9_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_9_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_9_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_9_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_9_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_9_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_9_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_9_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_9_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_9_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 10</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_10_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_10_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_10_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_10_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_10_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_10_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_10_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_10_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_10_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_10_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_10_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_10_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_10_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_10_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_10_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_10_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_10_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_10_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_10_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_10_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_10_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_10_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_10_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_10_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_10_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_10_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_10_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_10_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_10_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_10_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_10_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_10_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 11</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_11_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_11_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_11_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_11_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_11_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_11_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_11_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_11_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_11_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_11_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_11_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_11_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_11_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_11_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_11_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_11_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_11_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_11_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_11_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_11_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_11_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_11_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_11_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_11_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_11_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_11_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_11_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_11_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_11_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_11_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_11_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_11_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 12</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_12_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_12_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_12_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_12_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_12_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_12_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_12_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_12_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_12_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_12_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_12_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_12_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_12_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_12_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_12_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_12_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_12_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_12_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_12_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_12_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_12_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_12_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_12_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_12_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_12_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_12_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_12_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_12_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_12_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_12_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_12_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_12_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 13</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_13_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_13_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_13_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_13_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_13_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_13_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_13_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_13_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_13_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_13_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_13_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_13_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_13_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_13_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_13_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_13_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_13_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_13_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_13_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_13_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_13_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_13_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_13_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_13_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_13_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_13_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_13_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_13_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_13_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_13_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_13_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_13_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 14</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_14_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_14_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_14_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_14_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_14_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_14_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_14_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_14_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_14_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_14_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_14_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_14_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_14_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_14_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_14_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_14_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_14_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_14_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_14_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_14_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_14_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_14_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_14_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_14_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_14_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_14_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_14_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_14_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_14_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_14_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_14_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_14_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 15</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_15_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_15_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_15_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_15_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_15_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_15_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_15_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_15_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_15_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_15_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_15_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_15_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_15_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_15_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_15_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_15_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_15_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_15_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_15_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_15_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_15_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_15_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_15_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_15_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_15_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_15_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_15_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_15_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_15_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_15_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_15_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_15_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 16</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_16_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_16_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_16_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_16_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_16_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_16_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_16_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_16_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_16_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_16_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_16_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_16_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_16_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_16_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_16_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_16_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_16_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_16_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_16_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_16_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_16_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_16_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_16_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_16_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_16_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_16_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_16_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_16_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_16_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_16_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_16_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_16_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 17</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_17_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_17_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_17_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_17_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_17_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_17_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_17_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_17_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_17_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_17_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_17_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_17_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_17_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_17_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_17_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_17_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_17_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_17_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_17_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_17_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_17_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_17_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_17_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_17_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_17_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_17_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_17_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_17_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_17_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_17_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_17_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_17_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 18</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_18_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_18_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_18_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_18_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_18_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_18_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_18_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_18_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_18_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_18_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_18_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_18_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_18_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_18_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_18_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_18_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_18_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_18_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_18_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_18_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_18_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_18_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_18_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_18_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_18_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_18_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_18_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_18_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_18_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_18_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_18_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_18_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 19</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_19_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_19_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_19_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_19_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_19_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_19_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_19_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_19_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_19_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_19_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_19_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_19_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_19_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_19_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_19_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_19_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_19_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_19_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_19_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_19_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_19_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_19_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_19_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_19_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_19_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_19_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_19_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_19_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_19_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_19_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_19_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_19_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="repeater-row form-grid mb-6">
+          <div class="form-grid field-group">
+            <h2 class="p-2.5 bg-blue text-white col-span-full !mb-0">Home 20</h2>
+          </div>
+          <div class="form-grid field-group">
+            <div class="visibility-check-field field col-span-2">
+              <label for="id_home_20_start_yr" class="label-class">Start Year <span class="required">*</span></label>
+              <div class="input">
+                {{ form3.home_20_start_yr }}
+              </div>
+            </div>
+            <div class="field col-span-2">
+              <label for="id_home_20_end_yr" class="label-class">End Year</label>
+              <div class="input">
+                {{ form3.home_20_end_yr }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid field-group !grid-cols-12">
+            <div class="form-grid field-group p-0 !col-span-7 !grid-cols-8">
+              <div class="field col-span-2">
+                <label for="id_home_20_city" class="label-class">City</label>
+                <div class="input">
+                  {{ form3.home_20_city }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_20_province" class="label-class">Province</label>
+                <div class="input">
+                  {{ form3.home_20_province }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_20_country" class="label-class"> Country</label>
+                <div class="input">
+                  {{ form3.home_20_country }}
+                </div>
+              </div>
+              <div class="field col-span-2">
+                <label for="id_home_20_postal_code" class="label-class">Postal Code</label>
+                <div class="input">
+                  {{ form3.home_20_postal_code }}
+                </div>
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_20_street_address" class="label-class">Street Address</label>
+              <div class="input">
+                {{ form3.home_20_street_address }}
+              </div>
+            </div>
+            <div class="field col-span-7">
+              <label for="id_home_20_map_coordinates" class="label-class"> Map Coordinates</label>
+              <div class="input">
+                {{ form3.home_20_map_coordinates }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_20_avg_monthly_stay" class="label-class">Average Monthly Stay</label>
+              <div class="input">
+                {{ form3.home_20_avg_monthly_stay }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_20_housing_type" class="label-class"> Housing Type</label>
+              <div class="input">
+                {{ form3.home_20_housing_type }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_20_housing_type_other" class="label-class"> Housing Type (Other)</label>
+              <div class="input">
+                {{ form3.home_20_housing_type_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_20_trucks" class="label-class"> Trucks</label>
+              <div class="input">
+                {{ form3.home_20_trucks }}
+              </div>
+            </div>
+          </div>
+          <div class="form-grid !grid-cols-4">
+            <div class="field">
+              <label for="id_home_20_water_src" class="label-class">Water Source</label>
+              <div class="input">
+                {{ form3.home_20_water_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_20_water_src_other" class="label-class"> Water Source (Other)</label>
+              <div class="input">
+                {{ form3.home_20_water_src_other }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_20_heat_src" class="label-class">Heat Source</label>
+              <div class="input">
+                {{ form3.home_20_heat_src }}
+              </div>
+            </div>
+            <div class="field">
+              <label for="id_home_20_heat_src_other" class="label-class">Heat Source (Other)</label>
+              <div class="input">
+                {{ form3.home_20_heat_src_other }}
+              </div>
+            </div>
+          </div>
+        </div> 
+        <button type="button" class="add-row btn-blue-outline btn-sm icon-add">Add Home</button>
+      </div>
+      <div class="form-footer">
+        <a type="button" class="btn-blue-outline icon-previous" href="{% url 'add_mandatory_questionaire_de' participant_id %}">Previous</a>
+        <button type="submit" class="btn-blue">Finish</button>
+      </div>
+    </form>
+  </div>
+</div> 
+{% endblock %}
